@@ -1,0 +1,22 @@
+{
+  "name": "webpack4",
+  "version": "1.0.0",
+  "description": "esto sera divertido",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcamilo016/webpack4.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "Juan Camilo Acosta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jcamilo016/webpack4/issues"
+  },
+  "homepage": "https://github.com/jcamilo016/webpack4#readme"
+}
