@@ -4,7 +4,9 @@
   "description": "esto sera divertido",
   "main": "index.js",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "build-external": "webpack --config ./external/webpack.external.config.js",
+    "build-multi": "webpack --config ./multi-entry-points/webpack.multipoints.config.js"
   },
   "repository": {
     "type": "git",
