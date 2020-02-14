@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack",
     "build-external": "webpack --config ./external/webpack.external.config.js",
-    "build-multi": "webpack --config ./multi-entry-points/webpack.multipoints.config.js"
+    "build-multi": "webpack --config ./multi-entry-points/webpack.multipoints.config.js",
+    "build-css": "webpack --config ./css-style-loader/webpack.config.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,8 @@
   "homepage": "https://github.com/jcamilo016/webpack4#readme",
   "dependencies": {},
   "devDependencies": {
+    "css-loader": "^3.4.2",
+    "style-loader": "^1.1.3",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11"
   }
