@@ -1,0 +1,57 @@
+# Instalacion de webpack, usamos --save para que la configuracion de la nueva dependencia sea adicionada al archivo package.json
+npm install webpack --save 
+
+# Instalacion de webpack para ambiente de desarrollo, usamos --save-dev para que la configuracion de la nueva dependencia sea adicionada 
+al archivo package.json y adicional colocamo --save-exact para que siempre mantenga la misma versión de la dependencia
+npm install webpack --save-dev --save-exact
+
+# Instalar CLI de webpack, para versiones 4 y superiores
+npm install webpack-cli --save-dev
+
+# para trabajar unicamente con las dependencias dentro del proyecto donde se esta ejecutando, y no las globales
+npx  
+
+# para adicionar un javascript a webpack, el comando --mode puede ser development o production
+npx webpack ./index.js --output ./bundle.js --mode development
+
+# Si se tiene creado el archivo webpack.config.js, el anterior comando se puede ejecutar como:
+npx webpack
+
+#Configurar dentro del package.json los siguiente 
+"scripts": {
+    "build": "webpack"
+  }
+  
+Luego de esto, podremos inicializar el proyecto como "npm run build"
+
+# Para incluiir los archivos css de forma automatica al html a través del javascript, se debe instalar las sigtes dependencias
+npm install --save-dev css-loader
+npm install --save-dev style-loader
+
+#luego añadir lo sgte al webpack.config.js file
+module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader', //Inyecta el css dentro del html a través del javascript
+                    'css-loader' //Entinende que css puede existir dentro de javascript
+                ]
+            }
+        ]
+    }
+	
+# Instalar plugin que permita generar el css como archivo aparte
+npm install mini-css-extract-plugin html-webpack-plugin --save-dev
+
+#para instalar una version en especifico de una dependencia
+npm install --save-dev [dependecia]@[version]
+
+#Ejecutar un build que permita la autocompilación ante cualquier cambio
+npm run [build] -- -w
+
+# Para permitir que el navegador se autorecargue cada vez que se ejecuta un cambio, instalar lo siguiente (--save-dev se puede reemplazar por -D:
+npm install -D webpack-dev-server
+
+# Instalar Babel core para hacer compatible javascript moderno en los browsers
+npm install -D @babel/core babel-loader @babel/preset-env @babel/plugin-transform-runtime @babel/runtime
