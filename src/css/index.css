@@ -9,7 +9,7 @@ body {
     font-family: "";
     color: lightgrey;
     text-shadow: 1px 1px 1px black;
-    animation: 800ms latido infinite;
+    /*animation: 800ms latido infinite;*/
 }
 
 @keyframes latido {

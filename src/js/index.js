@@ -1,13 +1,6 @@
 import '../css/index.css';
-import search from './search';
-import render from './render';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './components/App';
 
-const id = prompt('quien es ese pokemón');
-
-search(id)
-    .then((data) => {
-        render(data);
-    })
-    .catch(() => {
-        console.log('no hubo pokemon');
-    });
+ReactDOM.render(<App />, document.getElementById('container'));
