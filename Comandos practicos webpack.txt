@@ -55,3 +55,12 @@ npm install -D webpack-dev-server
 
 # Instalar Babel core para hacer compatible javascript moderno en los browsers
 npm install -D @babel/core babel-loader @babel/preset-env @babel/plugin-transform-runtime @babel/runtime
+
+# Instalar dependencias de babel para compatibilidad de react js
+npm install -D @babel/preset-react
+
+# Instalar dependencias para el uso de react
+npm install --save react react-dom
+
+# Instalar url loader para manejo de imagenes, videos y fuentes
+npm install -D url-loader file-loader
